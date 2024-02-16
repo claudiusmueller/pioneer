@@ -1201,6 +1201,8 @@ local placeAdvert = function (station, ad)
 		isEnabled   = isEnabled
 	})
 	ads[ref] = ad
+    print("=======adding new ad=======")
+    print("# of ads: ", arraySize(ads))
 end
 
 local makeAdvert = function (station, manualFlavour, closestplanets)
@@ -2287,3 +2289,5 @@ Event.Register("onShipDestroyed", onShipDestroyed)
 Mission.RegisterType("searchrescue",l.SEARCH_RESCUE, buildMissionDescription)
 
 Serializer:Register("searchrescue", serialize, unserialize)
+
+return ads
